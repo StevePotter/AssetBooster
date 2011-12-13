@@ -1,0 +1,159 @@
+Assets - javascript, css, images, etc - are an important part of your web site.  Most sites deliver the assets from the web server without any compression.  Bummer, since assets could be delivered much more effectively, which would boost the performance of the site.  From Yahoo’s guide on site performance, you should:
+1. Combine assets.  If you have a bunch of js or css files that you generally include together, like jQuery and some plugins - consider combining them into a single file.  This will reduce the number of http requests for your visitors.
+2. Use a Content Delivery Network.  Your server is at one single location.  CDNs copy your content into various servers all around the world.  So if your web server is in Canada, someone in Miami would get your site assets much quicker because the CDN has a server in South Beach.  By doing this, you free up the server to process only page requests, which could also speed things up.
+3. Cache.  With the proper http headers, you can prevent a browser from constantly downloading the same asset file.  This will result in much faster rendering time on other pages and revisits.
+4. Minimize.  Javascript and CSS sheets typically have comments and whitespace.  In production, whitespace should be cleared out.  And javascript could be compressed even further by shortening variable names and whatnot.
+5. Compress.  The vast majority of browsers support gzip decompression.  This means you can zip your assets - typically js and css - and the browser will automatically decompress.  Gzip typically reduces asset files sizes by 70%, which means faster asset loading, which means faster web site.
+
+
+Sounds great, but isn’t that a lot of work?  Yes, it is.  And, lots of solutions create problems that disrupt development, deployment, and troubleshooting.   That’s why Asset Booster was made.  Booster does all the grunt work of processing and deploying assets.  It also helps you generate the proper html needed to link to your optimized, CDN-based assets.  Best of all, it allows you to use local assets during development.  So your development experience doesn’t change.  All you need to do is run a single exe and Booster handles the rest.
+
+
+Booster was built for www.takeoffvideo.com, an ASP.NET MVC web app used by thousands of people.  The main developer, me, couldn’t sleep properly until all the aforementioned techniques were put into place.  After failing to find the tool for the job, I made it myself.  
+
+
+Check out Takeoff’s source code:
+Production:
+<src sdf>
+That javascript file is created by Booster.  
+
+
+Now what does that look like during development?  It’s just a bunch of separate, comment-laden javascript files:
+
+
+What’s the code for it:
+Razor: @Html.JsLib(“main”)  WebForms: <%=Html.JsLib(“main”) %>
+
+
+Pretty slick, right?
+
+
+Getting Started
+Let’s get this thing going!
+1.  Set up CDN
+Amazon has built an amazing ecosystem of cloud products called Amazon Web Services (AWS).  One of them is CloudFront.  CloudFront is a high performance CDN with pay-as-you-go pricing.  It has “edge” servers placed all around the world, serving your content lightning fast.  Your bill will typically be a few bucks at the max.  Booster currently works only with CloudFront and if someone wants to support a different CDN (like Azure), let me know.
+
+
+CloudFront typically uses another AWS product called S3.  S3 is a cloud file storage service.  Think of a rock solid, infinite web-based hard drive.  Lots of web apps, such as DropBox, run off S3.  CloudFront works by pulling files from S3 as they are requested. 
+
+
+Booster uploads the files to S3 and hence CloudFront.  It also includes a little utility to perform the initial setup work, ignitebooter.exe, although if you want you can perform the work yourself using Amazon’s web-based console.  The setup really only takes a few minutes and only needs to be performed once.
+Sign Up
+Before you do anything, sign up for S3 and CloudFront.  To do that, go to http://aws.amazon.com/s3/ and http://aws.amazon.com/cloudfront/ and follow the instructions to sign up.  Upon signing up, you will recieve a public & private access key.  Keep that around because Booster needs it. 
+
+
+Set up  
+AWS has a sweet web-based management console.  You can use it to perform a few setup steps.  There is also a slick FireFox addon, S3Fox, that does a great job of managing S3.  Or you can just use ignitebooster.exe.  
+
+
+Using ignitebooster.exe
+
+
+DIY
+Create a bucket
+
+
+2.  Configure Asset Libraries
+Out of the box, Booster will deploy typical asset files - png, jpb, jpeg, bmp, and swf - automatically.  Javascript and CSS requires a bit more work.  This is because those files can be combinied, minified, and gzipped.  But in order to combine them, Booster needs to know which ones should be combined.  This is done by specifying “libraries” in the web config.
+
+
+Yes, when you add a new js or css you have to add it to the web.config.  Luckily you don’t have to add any <script> tags, so it’s a decent tradeoff.  Each library gets a unique name and a list of files that comprise it.  You can build your libraries right now or as you go.
+
+
+3.  Update Code 
+If you are adding Booster to an existing app, you’ll have to do a bit of code updating.  Luckily it’s easy.  Since most people use WebForms for their ASP.NET MVC views and not Razor, I’ll go with WebForms.  Booster’s main assembly, booster.dll, which your app must reference, includes some html helpers that make it easy.
+
+
+Scripts
+
+
+CSS
+
+
+Images
+
+
+Other
+4.  Deploy
+Booster has an exe, boosterdeploy.exe, that takes all your assets, processes them accordingly, and uploads them to CloudFront.  It then makes a slight modification to your app’s web.config file.  To use it, open up a command prompt and type:
+boosterdeploy.exe -appPath “c:\appPathRoot” -awsKey “fromaws” -awsSecretKey “dddd”
+
+
+You’ll see a bunch of messages and then it should close.  If you have the app open in Visual Studio, you might get a message that web.config was modified.  This is normal.  Accept any changes and run your app.
+
+
+You’ll have to run boosterdeploy each time your assets change.  If you’re in production, you’ll also have to redeploy your code, or at least update the web config.
+
+
+5.  Test
+If you run your app, you’ll see that it’s still using local assets.  This is because Booster will automatically use local assets when you’re using localhost.  But we want to test the assets on your CDN.  To do that, just modify web.config:
+
+
+Now run the app.  Hopefully it looks the same.  If you view source, you should see funky urls.
+
+
+If background images are missing, chances are you need to update your CSS sheets to use relative paths instead of absolute ones.  To do that, you change something like:
+
+
+to
+
+
+
+
+Feel free to create a batch file so later on you don’t need to type so much.  
+
+
+Details
+
+
+Folder Structure
+When boosterdeploy uploads assets to CloudFront, it includes the necessary HTTP cache headers to allow for “infinite” caching.  To prevent an old cached file from being used in place of the current one, a unique URL must exist for every new version of the asset.  
+
+
+One technique people use is to overwrite the existing file and then append a query string parameter, like http://assets.myapp.com/images/header.png?version=3422.  This works, but it has a few problems.  First, it will overwrite any existing files, which could affect current site visitors.  Also, during deployment, there would be a period where the new files would be used before the app code is deployed, which could cause a problem, especially if you change your DOM or JS initialization string.  Plus, if you find an error later on, you can’t quickly revert back to a previous version.
+
+
+To avoid problems altogether, Booster creates a new folder within your asset repository each time you deploy.  So you’ll see links like http://assets.myapp.com/32/images/header.png.  The “32” is a number that is incremented each time you deploy.  It is specified in web.config.  
+
+
+A nice thing about this is that you can upload and test the latest production assets without affecting your current site visitors.  Once you deploy the app’s code, users will instantly start using the latest asset version.  If you are a soloist or small team, this means you can use the same AWS account for production and development without any real risk to your production site.  However, if you are a large team, it is recommended that you have 2 AWS accounts - one production and one development.  You could also set up two different S3 buckets, one for dev and one for production, but your devs would have AWS keys to your production environment.  It’s your call.
+
+
+A problem with Booster’s approach is that you will stockpile old unused assets.  You can go ahead and delete old folders yourself.  But really it’s not a big deal because asset files typically aren’t more than a few megabytes, and S3 is so darn cheap that the difference will only be a few cents.
+
+
+HTTPS
+If you have pages that use SSL, you want your assets to be delivered via SSL.  Otherwise users will get that “Do you want to view only the webpage content that was delivered securely” message (IE at least) and they might not get your assets, which would screw up the site.  Luckily Booster handles this.  If you are using the typical CloudFront style url prefix, such as “http://d195o39hmhpr54.cloudfront.net/”, then Booster will automatically deliver assets from “https://d195o39hmhpr54.cloudfront.net/” if the current page request is SSL.  If you desire a special https prefix, you can add it in the BLAH web.config key.
+
+
+Please note that if you set up your own CNAME for assets, this could break the 
+
+
+Custom Asset Domain Name
+
+
+Recommendations:
+- modify web.config
+- use separate AWS accounts or buckets
+
+
+Css relative paths
+
+
+Debugging Deployed Assets
+Say a user reports a javascript error on your site.  You test and it’s true.  You open FireBug and debug the script.  It breaks on the error.  But since the file has been all packed up, it’ll be super hard to debug.  That sucks
+
+
+Folder strucutre
+
+
+ Most sites in production deliver the assets the same way they do in development - from the web server, not minimized or zipped.  That’s too bad because those sites are missing out on a great chance to boost their performance.
+
+
+What about https
+
+
+Dev copy
+
+
+One way to boost a web site’s performance is to
