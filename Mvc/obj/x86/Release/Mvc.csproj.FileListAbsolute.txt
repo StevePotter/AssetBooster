@@ -1,0 +1,9 @@
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\bin\Release\AssetBooster.Mvc.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\bin\Release\AssetBooster.Mvc.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\bin\Release\AssetBooster.Configuration.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\bin\Release\Steveo.Wetnap.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\bin\Release\AssetBooster.Configuration.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\bin\Release\Steveo.Wetnap.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\obj\x86\Release\AssetBooster.Mvc.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\obj\x86\Release\AssetBooster.Mvc.pdb

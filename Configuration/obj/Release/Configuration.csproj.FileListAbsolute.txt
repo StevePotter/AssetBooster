@@ -1,0 +1,5 @@
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Configuration\bin\Release\AssetBooster.Configuration.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Configuration\bin\Release\AssetBooster.Configuration.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Configuration\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Configuration\obj\Release\AssetBooster.Configuration.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Configuration\obj\Release\AssetBooster.Configuration.pdb

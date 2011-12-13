@@ -1,0 +1,11 @@
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebFormsSample\bin\WebFormsSample.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebFormsSample\bin\WebFormsSample.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebFormsSample\bin\AssetBooster.Configuration.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebFormsSample\bin\AssetBooster.WebForms.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebFormsSample\bin\Steveo.Wetnap.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebFormsSample\bin\AssetBooster.Configuration.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebFormsSample\bin\AssetBooster.WebForms.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebFormsSample\bin\Steveo.Wetnap.xml
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebFormsSample\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebFormsSample\obj\Release\WebFormsSample.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebFormsSample\obj\Release\WebFormsSample.pdb

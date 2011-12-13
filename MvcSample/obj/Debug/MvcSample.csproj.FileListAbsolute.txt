@@ -1,0 +1,29 @@
+D:\Mediascend\Development\AssetBooster\MvcSample\bin\MvcSample.dll
+D:\Mediascend\Development\AssetBooster\MvcSample\bin\MvcSample.pdb
+D:\Mediascend\Development\AssetBooster\MvcSample\bin\AssetBooster.Configuration.dll
+D:\Mediascend\Development\AssetBooster\MvcSample\bin\AssetBooster.Configuration.pdb
+D:\Mediascend\Development\AssetBooster\MvcSample\obj\Debug\ResolveAssemblyReference.cache
+D:\Mediascend\Development\AssetBooster\MvcSample\obj\Debug\MvcSample.dll
+D:\Mediascend\Development\AssetBooster\MvcSample\obj\Debug\MvcSample.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\MvcSample\bin\MvcSample.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\MvcSample\bin\MvcSample.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\MvcSample\bin\AssetBooster.Configuration.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\MvcSample\bin\AssetBooster.Configuration.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\MvcSample\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\MvcSample\obj\Debug\MvcSample.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\MvcSample\obj\Debug\MvcSample.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\MvcSample\bin\AssetBooster.Mvc.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\MvcSample\bin\Steveo.Wetnap.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\MvcSample\bin\AssetBooster.Mvc.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\MvcSample\bin\Steveo.Wetnap.xml
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\MvcSample.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\MvcSample.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\AssetBooster.Configuration.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\AssetBooster.Mvc.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\Steveo.Wetnap.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\AssetBooster.Configuration.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\AssetBooster.Mvc.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\obj\Debug\MvcSample.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\obj\Debug\MvcSample.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\Steveo.Wetnap.pdb

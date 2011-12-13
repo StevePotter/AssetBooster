@@ -1,0 +1,988 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Steveo.Wetnap</name>
+    </assembly>
+    <members>
+        <member name="T:System.WetnapExtensions">
+            <summary>
+            Wetnap extension methods for reflection.
+            </summary>
+            <summary>
+            Wetnap extension methods for strings.
+            </summary>
+            <summary>
+            Wetnap extension methods for enumerable types like array and list.
+            </summary>
+            <summary>
+            Wetnap extension methods for various .NET numeric types.
+            </summary>
+            <summary>
+            Contains various helpful extension methods that Steve Potter has assembled throughout the years.
+            </summary>
+            <summary>
+            Wetnap extension methods for DateTime.
+            </summary>
+        </member>
+        <member name="M:System.WetnapExtensions.Attribute``1(System.Reflection.MemberInfo)">
+            <summary>
+            Gets the first attribute for the given member.  Searches through base classes as well.  If the attribute isn't found, null is returned.
+            </summary>
+            <typeparam name="TAttribute"></typeparam>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.HasChars(System.String)">
+            <summary>
+            Whether the value is not null and has at least one character (whitespace or not).
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.HasChars(System.String,System.Boolean)">
+            <summary>
+            Whether the value is not null and has at least one character, with an option to disregard whitespace.
+            </summary>
+        </member>
+        <member name="M:System.WetnapExtensions.HasNoChars(System.String)">
+            <summary>
+            Just a shortcut for the awkward string.IsNullOrEmpty static method.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.HasNonWhitespace(System.String)">
+            <summary>
+            Whether the value has at least one non-whitespace one character.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.IsNullOrWhiteSpace(System.String)">
+            <summary>
+            From .net 4.0, so we can use that method without requiring 4.0.  
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.EqualsExact(System.String,System.String)">
+            <summary>
+            Just a shortcut for Equals(StringComparison.Ordinal).  Slightly shorter and neater.
+            </summary>
+            <param name="value"></param>
+            <param name="toRemove"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.EqualsCaseInsensitive(System.String,System.String)">
+            <summary>
+            Just a shortcut for Equals(StringComparison.Ordinal).  Slightly shorter and neater.
+            </summary>
+            <param name="value"></param>
+            <param name="toRemove"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.EqualsAny(System.String,System.String[])">
+            <summary>
+            Indicates whether the string passed in is equal to any of the possible matches provided.
+            </summary>
+            <param name="value"></param>
+            <param name="toRemove"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.EqualsAny(System.String,System.StringComparison,System.String[])">
+            <summary>
+            Indicates whether the string passed in is equal to any of the possible matches provided.
+            </summary>
+            <param name="value"></param>
+            <param name="toRemove"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Strip(System.String,System.String)">
+            <summary>
+            Removes all occurances of the given string.
+            </summary>
+            <param name="value"></param>
+            <param name="toRemove"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Before(System.String,System.String)">
+            <summary>
+            Gets the string that comes before the first occurance of the match is found.  For example, calling "I eat hot dog".Before("hot") would return "i eat ".
+            Returns null if the match wasn't found.
+            </summary>
+            <param name="value"></param>
+            <param name="match"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Before(System.String,System.String,System.StringComparison)">
+            <summary>
+            Gets the string that comes before the first occurance of the match is found.  For example, calling "I eat hot dog".Before("hot") would return "i eat ".
+            Returns null if the match wasn't found.
+            </summary>
+            <param name="value"></param>
+            <param name="match"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.After(System.String,System.String)">
+            <summary>
+            Gets the string that comes after the last occurance of the match is found.  For example, calling "I eat hot dog".After("hot") would return "i eat ".
+            Returns null if the match wasn't found.
+            </summary>
+            <param name="value"></param>
+            <param name="match"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.After(System.String,System.String,System.StringComparison)">
+            <summary>
+            Gets the string that comes after the first occurance of the match is found.  For example, calling "I eat hot dog".After("hot") would return " dog".
+            Returns null if the match wasn't found.
+            </summary>
+            <param name="value"></param>
+            <param name="match"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.AfterLast(System.String,System.String,System.StringComparison)">
+            <summary>
+            Gets the string that comes after the first occurance of the match is found.  For example, calling "I eat hot dog".After("hot") would return " dog".
+            Returns null if the match wasn't found.
+            </summary>
+            <param name="value"></param>
+            <param name="match"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.From(System.String,System.String)">
+            <summary>
+            Gets the string that comes after the beginning the first occurance of the given match.  For example, "you didn't know".From("did") == "didn't know".  Uses case-sensitive ordinal search.
+            </summary>
+            <param name="value"></param>
+            <param name="match"></param>
+            <returns></returns>
+            <remarks>A good opposite to this could be Until, although that's not right (Up to and including...find a one word answer for that)</remarks>
+        </member>
+        <member name="M:System.WetnapExtensions.From(System.String,System.String,System.StringComparison)">
+            <summary>
+            Gets the string that comes after the beginning the first occurance of the given match.  For example, "you didn't know".From("did") == "didn't know"
+            </summary>
+            <param name="value"></param>
+            <param name="match"></param>
+            <returns></returns>
+            <remarks>A good opposite to this could be Until, although that's not right (Up to and including...find a one word answer for that)</remarks>
+        </member>
+        <member name="M:System.WetnapExtensions.HasLetters(System.String)">
+            <summary>
+            Indicates whether the string has at least one letter.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.FilterDigits(System.String)">
+            <summary>
+            Removes every character from the string that is not a number.  so "4ms" will return "4" and "4 plus 1" returns "41".
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Contains(System.String,System.String,System.StringComparison)">
+            <summary>
+            Indicates whether the string contains the string provided.
+            </summary>
+            <param name="value"></param>
+            <param name="match"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.ContainsAny(System.String,System.StringComparison,System.String[])">
+            <summary>
+            Indicates whether the string contains any of the strings provided.
+            </summary>
+            <param name="value"></param>
+            <param name="match"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.ToInt(System.String)">
+            <summary>
+            Converts this value to an integer, throwing an exception if there are any problems.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+            <remarks>Converting strings to integer happens so often that this function was deemed useful.</remarks>
+        </member>
+        <member name="M:System.WetnapExtensions.ToIntTry(System.String)">
+            <summary>
+            Converts this value to an integer, reiturning null f there are any problems.
+            </summary>
+            <remarks>Converting strings to integer happens so often that this function was deemed useful.</remarks>
+        </member>
+        <member name="M:System.WetnapExtensions.LowerFirstChar(System.String)">
+            <summary>
+            Lowercases the first character, if one exists.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.UpperFirstChar(System.String)">
+            <summary>
+            Uppercases the first character, if one exists.  Otherwise just returns null.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.FromEnd(System.String,System.Int32)">
+            <summary>
+            Returns the specified number of characters from the end of the string.  If the string is shorter than the number of chars specified, the entire string will be returned.
+            </summary>
+            <param name="value"></param>
+            <param name="charsToTake"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.RemoveFromEnd(System.String,System.Int32)">
+            <summary>
+            Returns this string with the given number of characters removed from the end of it.
+            </summary>
+            <param name="value"></param>
+            <param name="chars"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.StartWith(System.String,System.String)">
+            <summary>
+            If the value doesn't start with startWith, this adds it.
+            </summary>
+            <param name="startsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.StartWith(System.String,System.String,System.StringComparison)">
+            <summary>
+            If the value doesn't start with startWith, this adds it.
+            </summary>
+            <param name="startsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.StartWithout(System.String,System.String)">
+            <summary>
+            If the value starts with startWith, this removes it.  It will repeat until it no longers starts with it, so "AAAB".NotStartingWith("A") == "B"
+            </summary>
+            <param name="startsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.StartWithout(System.String,System.String,System.StringComparison)">
+            <summary>
+            If the value starts with startWith, this removes it.  It will repeat until it no longers starts with it, so "AAAB".NotStartingWith("A") == "B"
+            </summary>
+            <param name="startsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.EndWith(System.String,System.String)">
+            <summary>
+            If the value doesn't end with endWith, this adds it.
+            </summary>
+            <param name="endsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.EndWith(System.String,System.String,System.StringComparison)">
+            <summary>
+            If the value doesn't end with endWith, this adds it.
+            </summary>
+            <param name="endsWith"></param>
+            <returns></returns>
+            <remarks>
+            todo: There is a problem with this.  "/te".EndingWith("/test") will create "/te/test", which it shouldn't do.  
+            </remarks>
+        </member>
+        <member name="M:System.WetnapExtensions.EndWithout(System.String,System.String)">
+            <summary>
+            If the value ends with endWith, this removes it.  It will repeat until it no longers ends with it, so "ABBB".NotEndingWith("B") == "A", "tr".NotEndingWith("a") == ""
+            </summary>
+            <param name="endsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.EndWithout(System.String,System.String,System.StringComparison)">
+            <summary>
+            If the value ends with endWith, this removes it.  It will repeat until it no longers ends with it, so "AAAB".NotEndingWith("A") == "B"
+            </summary>
+            <param name="endsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Surround(System.String,System.String)">
+            <summary>
+            If the value doesn't start and end with surroundedBy, this adds it to the necessary sides.
+            </summary>
+            <param name="endsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Surround(System.String,System.String,System.StringComparison)">
+            <summary>
+            If the value doesn't start and end with surroundedBy, this adds it to the necessary sides.
+            </summary>
+            <param name="endsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Surround(System.String,System.String,System.String)">
+            <summary>
+            If the value doesn't start and end with the values, this adds it to the necessary sides.
+            </summary>
+            <param name="endsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Surround(System.String,System.String,System.String,System.StringComparison)">
+            <summary>
+            If the value doesn't start and end with the values, this adds it to the necessary sides.
+            </summary>
+            <param name="endsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.NotSurroundedBy(System.String,System.String)">
+            <summary>
+            Makes sure the string doesn't start or end with the given value.
+            </summary>
+            <param name="endsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.NotSurroundedBy(System.String,System.String,System.StringComparison)">
+            <summary>
+            Makes sure the string doesn't start or end with the given value.
+            </summary>
+            <param name="endsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.NotSurroundedBy(System.String,System.String,System.String)">
+            <summary>
+            Makes sure the string doesn't start or end with the given value.
+            </summary>
+            <param name="endsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.NotSurroundedBy(System.String,System.String,System.String,System.StringComparison)">
+            <summary>
+            Makes sure the string doesn't start or end with the given value.
+            </summary>
+            <param name="endsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Indent(System.String,System.Int32)">
+            <summary>
+            Adds a certain number of spaces to each line in the string.
+            </summary>
+            <param name="value"></param>
+            <param name="doubleQuotes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.SplitLines(System.String)">
+            <summary>
+            Splits the string into its given lines.
+            </summary>
+            <param name="value"></param>
+            <param name="doubleQuotes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.CharsOrNull(System.String)">
+            <summary>
+            If the value has characters, it returns the string.  If null or empty, it returns null.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.CharsOrEmpty(System.String)">
+            <summary>
+            If the value has characters, it returns the string.  If it is null or empty, it returns empty.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.CharsOr(System.String,System.String)">
+            <summary>
+            If the value has characters (!IsNullOrEmpty), it returns the original string.  If it is null or empty, it returns the "returnIfNoChars" value.
+            </summary>
+        </member>
+        <member name="M:System.WetnapExtensions.Truncate(System.String,System.Int32,System.StringTruncating,System.String)">
+            <summary>
+            If the length of this string exceeds the max, it will be trimmed according to the type specified.
+            </summary>
+            <param name="value">The value to be truncated.</param>
+            <param name="maxLength">The max length of the string.</param>
+            <param name="trimming"></param>
+            <param name="ellipsis"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.FindWordBreak(System.String,System.Int32)">
+            <summary>
+            Gets the index of the space before the closest word in the string from searchStartIndex.  
+            </summary>
+            <param name="value"></param>
+            <param name="searchStartIndex"></param>
+            <returns></returns>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:System.WetnapExtensions.Hash(System.String,System.String)">
+            <summary>
+            Generates a one-way hash for this plain text value with the key (a secret key) provided and returns a base64-encoded result.  Uses the system's default hash algorithm,  which in testing was shown to be HMACSHA1 (this will vary though).
+            </summary>
+            <param name="text">Plain text to be hased.</param>
+            <param name="hashKey">The key, which should be kept secret, used to hash the text.</param>
+            <returns>
+            Hash value formatted as a base64-encoded string.
+            </returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Hash(System.String,System.String,System.String)">
+            <summary>
+            Generates a one-way hash for this plain text value with the key (a secret key) provided and returns a base64-encoded result.
+            </summary>
+            <param name="text">Plain text to be hased.</param>
+            <param name="hashKey">The key, which should be kept secret, used to hash the text.</param>
+            <param name="hashAlgorithm">Name of the hash algorithm, which is name of class in Crytography namespace.  Ex: "HMACSHA1".  If null or empty string is passed, the default hash algorithm will be used.</param>
+            <returns>
+            Hash value formatted as a base64-encoded string.
+            </returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Hash(System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            Generates a one-way hash for this plain text value with the key (a secret key) provided and returns a base64-encoded result.
+            </summary>
+            <param name="text">Plain text to be hased.</param>
+            <param name="hashKey">The key, which should be kept secret, used to hash the text.</param>
+            <param name="hashAlgorithm">Name of the hash algorithm, which is name of class in Crytography namespace.  Ex: "HMACSHA1".  If null or empty string is passed, the default hash algorithm will be used.</param>
+            <param name="encoding">The encoding that is used to feed the text value into the has algorithm.</param>
+            <returns>
+            Hash value formatted as a base64-encoded string.
+            </returns>
+        </member>
+        <member name="M:System.WetnapExtensions.MatchesHash(System.String,System.String,System.String,System.String)">
+            <summary>
+            Checks whether this string, which should plain text and not hashed, matches the version provided that has previously been hashed (preferrably through the Hash method).
+            </summary>
+            <param name="plainText">The plain, nonhashed text.</param>
+            <param name="hasedValue">The previously hashed value to match against.</param>
+            <param name="hashKey">The key, which should be kept secret, used to hash the text.</param>
+            <param name="hashAlgorithm">Name of the hash algorithm, which is name of class in Crytography namespace.  Ex: "HMACSHA1".  If null or empty string is passed, the default hash algorithm will be used.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.AssembleList(System.String[])">
+            <summary>
+            Assembles a list in the standard English style, like "one, two, and three" or "one and two"
+            </summary>
+            <param name="elements">The string elements to include in the list.</param>
+            <returns></returns>
+            <example>Passing in {"1","2","3"} will return "1, 2, and 3".</example>
+        </member>
+        <member name="M:System.WetnapExtensions.AssembleList(System.String[],System.String,System.String,System.String)">
+            <summary>
+            Assembles a list with specified elemets and separators.
+            </summary>
+            <param name="elements">The string elements to include in the list.</param>
+            <param name="separator">Separator between elements.</param>
+            <param name="finalSeparator">Separator between the last two elements.</param>
+            <param name="separatorForListOfTwo">Separator between elements if the list only has two elements.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Join(System.Collections.Generic.IEnumerable{System.String},System.Func{System.Int32,System.String})">
+            <summary>
+            Like String.Join but includes the ability to include custom separators.  It is useful for assembling lists like "Me, Myself, and I"
+            </summary>
+            <param name="values"></param>
+            <param name="separator">Function that recieves the current index of the string in the list of values.  Returns the separator.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.SeperatedBy(System.String,System.String,System.String)">
+            <summary>
+            Takes this string and joins it with the other one, separated by the given separator.  It will guarantee that the separator only occurs once, even if this string ends with it and the other starts wtih it already.  This is useful in things like combining relative folders paths.
+            </summary>
+            <param name="value"></param>
+            <param name="separator"></param>
+            <param name="otherValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.ConvertTo``1(System.String)">
+            <summary>
+            Takes the string and using TypeConverters, converts it to the given type.  A nice way to succinctly convert a string into any type.  
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Format(System.String,System.Object,System.IFormatProvider)">
+            <summary>
+            An advanced version of string.Format.  If you pass a primitive object (string, int, etc), it acts like the regular string.Format.  If you pass an anonmymous type, you can name the paramters by property name.
+            </summary>
+            <param name="formatString"></param>
+            <param name="arg"></param>
+            <returns></returns>
+            <example>
+            "The {Name} family has {Children} children".Format(new { Children = 4, Name = "Smith" })
+            
+            results in 
+            "This Smith family has 4 children
+            </example>
+        </member>
+        <member name="M:System.WetnapExtensions.Parse(System.String)">
+            <summary>
+            Parses the given format string into a list of fragments.
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.ParseFragment(System.String,System.Int32,System.Int32@)">
+            <summary>
+            Finds the next delimiter from the starting index.
+            </summary>
+        </member>
+        <member name="M:System.WetnapExtensions.ReplaceEscapes(System.String)">
+            <summary>
+            Replaces escaped brackets, turning '{{' and '}}' into '{' and '}', respectively.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.IsEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Indicates if the sequence has no elements.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.HasItems``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Indicates if the sequence has at least one element.  Opposite of IsEmpty.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.IsIndexInBounds(System.Collections.IList,System.Int32)">
+            <summary>
+            Indicates whether there is an element at the given index.
+            </summary>
+            <param name="list"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.RemoveAll``1(System.Collections.Generic.IList{``0},System.Predicate{``0})">
+            <summary>
+            Removes all elements from the list that satisfy the condition.  Returns the list that was passed in (minus removed elements) for chaining.  This is the same as List's RemoveAll but can be used for any IList object.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+            <param name="match"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Add``1(System.Collections.Generic.HashSet{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Adds a bnuch of items to the set at once.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="set"></param>
+            <param name="items"></param>
+        </member>
+        <member name="M:System.WetnapExtensions.Remove``1(System.Collections.Generic.HashSet{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Removes a bunch of items from the set.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="set"></param>
+            <param name="items"></param>
+        </member>
+        <member name="M:System.WetnapExtensions.Ensure``2(System.Collections.Generic.IDictionary{``0,``1},``0,System.Func{``1})">
+            <summary>
+            Returns the value for the given key.  If it doesn't exist, the createIfMissing method will be invoked and will be added to the dictionay.
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="set"></param>
+            <param name="key"></param>
+            <param name="createIfMissing"></param>
+        </member>
+        <member name="M:System.WetnapExtensions.Ensure(System.Collections.IDictionary,System.Object,System.Func{System.Object})">
+            <summary>
+            Returns the value for the given key.  If it doesn't exist, the createIfMissing method will be invoked and will be added to the dictionay.
+            </summary>
+        </member>
+        <member name="M:System.WetnapExtensions.IsPositive(System.Int32)">
+            <summary>
+            Indicates whether this number is greater than 0.
+            </summary>
+        </member>
+        <member name="M:System.WetnapExtensions.IsNegative(System.Int32)">
+            <summary>
+            Indicates whether this number is less than 0.
+            </summary>
+        </member>
+        <member name="M:System.WetnapExtensions.ToInvariant(System.Int32)">
+            <summary>
+            Returns the ToString with invariant formatting passed.  Value will be things like "123432"
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.IfPositive(System.Int32,System.Action)">
+            <summary>
+            If the value is positive. the action is performed.  This can just save a few lines of code.
+            </summary>
+            <param name="actionIfPositive">The action invoked when the value is positive.</param>
+        </member>
+        <member name="M:System.WetnapExtensions.IfPositive(System.Int32,System.Action{System.Int32})">
+            <summary>
+            If the value is positive. the action is performed.  This can just save a few lines of code.
+            </summary>
+            <param name="actionIfPositive">The action invoked when the value is positive.  This includes the value as a parameter, which is useful for values that are calculated.</param>
+        </member>
+        <member name="M:System.WetnapExtensions.ToProperPlurality(System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            Small helper to return a string that cooresponds to the correct value, to prevent things like "1 Items"
+            </summary>
+            <param name="value"></param>
+            <param name="singularText">The value to return when the value is 1.  The number value is not included.</param>
+            <param name="pluralText">The value to be appended after the value.  The number value is included.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.ToProperPlurality(System.Int32,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Small helper to return a string that cooresponds to the correct value, to prevent things like "1 Items"
+            </summary>
+            <param name="value"></param>
+            <param name="zeroText">The value to return if the value is 0.  The number value is not included.</param>
+            <param name="singularText">The value to return when the value is 1.  The number value is not included.</param>
+            <param name="pluralText">The value to be appended after the value.  The number value is included.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.UpTo(System.Int32,System.Int32)">
+            <summary>
+            Returns integer values from (including) this value up to and including limit.   So 4.UpTo(7) would return 4,5,6,7
+            </summary>
+            <param name="value"></param>
+            <param name="limit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.ToInvariant(System.Double)">
+            <summary>
+            Returns the ToString with culture-invariant formatting passed.  Value will be things like "123432.324"
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.IsPositive(System.Double)">
+            <summary>
+            Indicates whether this number is greater than 0.
+            </summary>
+        </member>
+        <member name="M:System.WetnapExtensions.IsNegative(System.Double)">
+            <summary>
+            Indicates whether this number is less than 0.
+            </summary>
+        </member>
+        <member name="M:System.WetnapExtensions.ToString(System.Double,System.NumberFormat)">
+            <summary>
+            Converts the number to the given format. This is nice because you don't have to remember or look up format strings.  Uses the current thread's culture.
+            </summary>
+            <param name="value">The value to format.</param>
+            <param name="format">The type of format to use.</param>
+            <param name="culture">The culture info used to format.  If null, the Thread.CurrentThread.CurrentCulture will be used.</param>
+            <param name="decimals">The number of decimals to force the formatted value to.  If null, the amount of natural decimals will be used.</param>
+        </member>
+        <member name="M:System.WetnapExtensions.ToString(System.Double,System.NumberFormat,System.Nullable{System.Int32})">
+            <summary>
+            Converts the number to the given format. This is nice because you don't have to remember or look up format strings.  Uses the current thread's culture.
+            </summary>
+            <param name="value">The value to format.</param>
+            <param name="format">The type of format to use.</param>
+            <param name="decimals">The number of decimals to force the formatted value to.  If null, the amount of natural decimals will be used.</param>
+        </member>
+        <member name="M:System.WetnapExtensions.ToString(System.Double,System.NumberFormat,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the number to the given format. This is nice because you don't have to remember or look up format strings.
+            </summary>
+            <param name="value">The value to format.</param>
+            <param name="format">The type of format to use.</param>
+            <param name="culture">The culture info used to format.  If null, the Thread.CurrentThread.CurrentCulture will be used.</param>
+        </member>
+        <member name="M:System.WetnapExtensions.ToString(System.Double,System.NumberFormat,System.Globalization.CultureInfo,System.Nullable{System.Int32})">
+            <summary>
+            Converts the number to the given format. This is nice because you don't have to remember or look up format strings.
+            </summary>
+            <param name="value">The value to format.</param>
+            <param name="format">The type of format to use.</param>
+            <param name="culture">The culture info used to format.  If null, the Thread.CurrentThread.CurrentCulture will be used.</param>
+            <param name="decimals">The number of decimals to force the formatted value to.  If null, the amount of natural decimals will be used.</param>
+        </member>
+        <member name="M:System.WetnapExtensions.Once``1(``0,System.Action{``0})">
+            <summary>
+            A simple way to perform some operation on an object once and have that object be returned for chaining.  This is useful in chainig situations for things  like static variable initializers or anonymous types, like private static Foo bar = new Foo { ... }.ChainOp(b=>b.Event += asdfasdf);  This is the same as Ruby's tap method.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <param name="op"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Times(System.Int32,System.Action)">
+            <summary>
+            Quick way to perform some operation X number of times.  This is the same as the times method in Ruby.
+            </summary>
+        </member>
+        <member name="M:System.WetnapExtensions.Times(System.Int32,System.Action{System.Int32})">
+            <summary>
+            Quick way to perform some operation X number of times.  This is the same as the times method in Ruby.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:System.WetnapExtensions.Each``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})" -->
+        <!-- Badly formed XML comment ignored for member "M:System.WetnapExtensions.Each``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Int32})" -->
+        <member name="M:System.WetnapExtensions.Each``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            Generic iterator function that is useful to replace a foreach loop with at your discretion.  A provided action is performed on each element.  This is meant to mimick jQuery's each function.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <param name="action">Function that takes in the current value in the sequence.  Returns a value indicating whether the iteration should continue.  So return false if you don't want to iterate anymore.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Each``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32,System.Boolean})">
+            <summary>
+            Generic iterator function that is useful to replace a foreach loop with at your discretion.  A provided action is performed on each element.  This is meant to mimick jQuery's each function.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <param name="action">Function that takes in the current value and its index in the sequence.  Returns a value indicating whether the iteration should continue.  So return false if you don't want to iterate anymore.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.Report(System.Exception)">
+            <summary>
+            Creates a detailed exception report for logging and whatnot.
+            </summary>
+        </member>
+        <member name="M:System.WetnapExtensions.Report(System.Exception,System.String)">
+            <summary>
+            Creates a detailed exception report for logging and whatnot.
+            </summary>
+        </member>
+        <member name="M:System.WetnapExtensions.Report(System.Exception,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Creates a detailed exception report for logging and whatnot.
+            </summary>
+            <param name="ex"></param>
+            <param name="heading"></param>
+            <param name="includeInnerExceptions"></param>
+            <param name="includeExceptionType"></param>
+            <param name="includeStackTrace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.CastTo``1(System.Object)">
+            <summary>
+            Simply casts the value to a type.  This is intended to be used for fluent programming to cut down on the big parenthesis that often is required when casting values during, say, deserialization.  If the value cannot be casted, an error will be thrown.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+            <remarks>Couldn't call this Cast because IEnmerable has an extension method that does this and we didn't want to interfere.</remarks>
+        </member>
+        <member name="M:System.WetnapExtensions.ValueEquals(System.Object,System.Object)">
+            <summary>
+            A fancy equals method that internally uses EqualityComparer.Default for the given type.  Works with all types of objects like nullable, enums, etc.  Great when working with boxed values, when normal Equals is not always reliable.
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="F:System.WetnapExtensions.DefaultComparers">
+            <summary>
+            Caches the IEqualityComparers per value type to avoid constant expensive reflection lookups.
+            </summary>
+        </member>
+        <member name="M:System.WetnapExtensions.IfNotNull``1(``0,System.Action{``0})">
+            <summary>
+            If the value is not null, the action is performed.  This just saves a little space and avoids possible copy-paste-replace bugs because the value is specified only once.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="val"></param>
+            <param name="actionIfNotNull"></param>
+        </member>
+        <member name="M:System.WetnapExtensions.IfNotNull``1(``0,System.Action)">
+            <summary>
+            If the value is not null, the action is performed.  This just saves a little space and avoids possible copy-paste-replace bugs because the value is specified only once.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="val"></param>
+            <param name="actionIfNotNull"></param>
+        </member>
+        <member name="M:System.WetnapExtensions.MapIfNotNull``2(``0,System.Func{``0,``1})">
+            <summary>
+            If the value isn't null, it returns the mapped value.  Otherwise, it returns null.
+            </summary>
+            <typeparam name="TValue"></typeparam>
+            <typeparam name="TResult"></typeparam>
+            <param name="value"></param>
+            <param name="mapIfHasValue"></param>
+            <param name="defaultVal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.MapIfNotNull``2(``0,System.Func{``0,``1},``1)">
+            <summary>
+            If the value is null, it returns a supplied default.  Otherwise it returns the result of the given mapping function.
+            </summary>
+            <typeparam name="TValue"></typeparam>
+            <typeparam name="TResult"></typeparam>
+            <param name="value"></param>
+            <param name="mapIfHasValue"></param>
+            <param name="defaultVal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.IfHasVal``1(System.Nullable{``0},System.Action{``0})">
+            <summary>
+            A helper to save some code when dealing with nullable valuess
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <param name="ifHas"></param>
+            <remarks>
+            Turns this:
+                if (outputRequest.VideoQuality.HasValue)
+                    output["quality"] = outputRequest.VideoQuality.Value;
+            Into this:
+                outputRequest.VideoQuality.IfHasVal(v => output["quality"] = v);
+                
+            Gets rid of an extra line and the need to have the variable used twice, which when dealign with copy/paste can make mistakes (gotta change 2 variable names instead of 1)
+            </remarks>
+        </member>
+        <member name="M:System.WetnapExtensions.IfType``1(System.Object,System.Action{``0})">
+            <summary>
+            A little code saver.  If the value is of the type passed, this will perform an action on that object.  The action is passed the value casted as the given type.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:System.WetnapExtensions.SinceEpoch(System.DateTime)">
+            <summary>
+            Calculates the time between this date and 1/1/1970, also known as Unix or POSIX time.
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.IsSameDay(System.DateTime,System.DateTime)">
+            <summary>
+            Indicates whether the current date falls on the same exact day as the other date.
+            </summary>
+            <param name="date"></param>
+            <param name="otherday"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.WetnapExtensions.ToString(System.DateTime,System.DateTimeFormat)">
+            <summary>
+            Converts the date to the given format, using the current thread's CurrentCulture value.
+            </summary>
+            <param name="value"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="P:System.WetnapExtensions.Fragment.Value">
+            <summary>
+            The literal value, or the name of the fragment, depending on fragment type.
+            </summary>
+        </member>
+        <member name="T:System.StringTruncating">
+            <summary>
+            Specifies how to trim charachters from a string that doesn't fit a length specified during Truncate().  Inspired by StringTruncating
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:System.StringTruncating.Character" -->
+        <member name="F:System.StringTruncating.Word">
+            <summary>
+            Specifies that text is trimmed to the nearest word.  This assumes words are separated by a single space, which may not apply to some cases or cultures.
+            </summary>
+        </member>
+        <member name="F:System.StringTruncating.EllipsisCharacter">
+            <summary>
+            Specifies that the text is trimmed to the nearest character, and an ellipsis is inserted at the end of a trimmed line.
+            </summary>
+        </member>
+        <member name="F:System.StringTruncating.EllipsisWord">
+            <summary>
+            Specifies that text is trimmed to the nearest word, and an ellipsis is inserted at the end of a trimmed line.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:System.StringTruncating.EllipsisCenter" -->
+        <member name="T:System.NumberFormat">
+            <summary>
+            Represents the display format for numeric values.
+            </summary>
+        </member>
+        <member name="F:System.NumberFormat.FixedPoint">
+            <summary>
+            The value is rendered with a fixed number of decimals.
+            </summary>
+        </member>
+        <member name="F:System.NumberFormat.General">
+            <summary>
+            A basic format that shows only the exact digits and decimals.  This ignores the Decimals property.  Does not include thousands separator.  Ex: 12.1, 22.41233, 10, -12.901
+            </summary>
+        </member>
+        <member name="F:System.NumberFormat.Number">
+            <summary>
+            The value is formatted as number, with thousand separator.
+            </summary>
+        </member>
+        <member name="F:System.NumberFormat.Currency">
+            <summary>
+            The value is formatted as a currency.
+            </summary>
+        </member>
+        <member name="F:System.NumberFormat.Percentage">
+            <summary>
+            The value is formatted as a percentage.
+            </summary>
+        </member>
+        <member name="F:System.NumberFormat.Scientific">
+            <summary>
+            The value is formatted using scientific notation.
+            </summary>
+        </member>
+        <member name="T:System.DateTimeFormat">
+            <summary>
+            Specifies common DateTime format, which is easier than entering the actual pattern.
+            </summary>
+        </member>
+        <member name="F:System.DateTimeFormat.NotSet">
+            <summary>
+            No format set, meaning the default culture setting will be used.
+            </summary>
+        </member>
+        <member name="F:System.DateTimeFormat.ShortDate">
+            <summary>
+            Represents the short date specified in System.Globalization.DateTimeFormatInfo.ShortDatePattern;
+            </summary>
+        </member>
+        <member name="F:System.DateTimeFormat.ShortTime">
+            <summary>
+            Represents the short time as specified in System.Globalization.DateTimeFormatInfo.ShortTime.
+            </summary>
+        </member>
+        <member name="F:System.DateTimeFormat.LongDate">
+            <summary>
+            Represents the long date as specified in System.Globalization.DateTimeFormatInfo.LongDatePattern.
+            </summary>
+        </member>
+        <member name="F:System.DateTimeFormat.LongTime">
+            <summary>
+            Represents the long time as specified in System.Globalization.DateTimeFormatInfo.LongTimePattern.
+            </summary>
+        </member>
+        <member name="F:System.DateTimeFormat.ShortDateTime">
+            <summary>
+            Represents the short date and time.  NOTE: System.Globalization.DateTimeFormatInfo 
+            does not have a culture-specific property for this.  The pattern is taken by concatenating the ShortDatePattern 
+            and ShortTimePattern with a space in the middle.  Therefore it is not guaranteed be entirely culturally correct, although most cultures put time after date.
+            </summary>
+        </member>
+        <member name="F:System.DateTimeFormat.LongDateTime">
+            <summary>
+            Represents the long date and time as specified in System.Globalization.DateTimeFormatInfo.LongDatePattern.
+            </summary>
+        </member>
+        <member name="F:System.DateTimeFormat.MonthDay">
+            <summary>
+            Represents the month and day as specified in System.Globalization.DateTimeFormatInfo.MonthDayPattern.  Normally the month is spelled out.
+            </summary>
+        </member>
+        <member name="F:System.DateTimeFormat.YearMonth">
+            <summary>
+            Represents the year and month as specified in System.Globalization.DateTimeFormatInfo.YearMonthPattern.  Normally the month is spelled out.
+            </summary>
+        </member>
+    </members>
+</doc>

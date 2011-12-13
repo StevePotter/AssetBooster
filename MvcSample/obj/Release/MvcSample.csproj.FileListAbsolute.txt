@@ -1,0 +1,11 @@
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\MvcSample.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\MvcSample.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\AssetBooster.Configuration.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\AssetBooster.Mvc.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\Steveo.Wetnap.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\AssetBooster.Configuration.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\AssetBooster.Mvc.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\bin\Steveo.Wetnap.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\obj\Release\MvcSample.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\MvcSample\obj\Release\MvcSample.pdb

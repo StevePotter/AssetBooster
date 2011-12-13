@@ -1,0 +1,56 @@
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\bin\Debug\BoosterDeploy.exe.config
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\bin\Debug\BoosterDeploy.exe
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\bin\Debug\BoosterDeploy.pdb
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\bin\Debug\AssetBooster.Configuration.dll
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\bin\Debug\AssetBooster.Configuration.pdb
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\obj\x86\Debug\BoosterDeploy.exe
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\obj\x86\Debug\BoosterDeploy.pdb
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\bin\Debug\AWSSDK.dll
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\bin\Debug\Mediascend.Wetnap.dll
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\bin\Debug\Yahoo.Yui.Compressor.dll
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\obj\x86\Debug\BoosterDeploy.Properties.Resources.resources
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\obj\x86\Debug\ResGen.read.1.tlog
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\obj\x86\Debug\ResGen.write.1.tlog
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\bin\Debug\Mediascend.Wetnap.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\bin\Debug\BoosterDeploy.exe.config
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\obj\x86\Debug\BoosterDeploy.exe
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\obj\x86\Debug\BoosterDeploy.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\obj\x86\Debug\BoosterDeploy.Properties.Resources.resources
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\obj\x86\Debug\ResGen.read.1.tlog
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\obj\x86\Debug\ResGen.write.1.tlog
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\bin\Debug\BoosterDeploy.exe
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\bin\Debug\BoosterDeploy.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\bin\Debug\AssetBooster.Configuration.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\bin\Debug\AWSSDK.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\bin\Debug\Yahoo.Yui.Compressor.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\bin\Debug\EcmaScript.NET.modified.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\bin\Debug\AssetBooster.Configuration.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\bin\Debug\CommandLine.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\bin\Debug\CommandLine.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\bin\Debug\CommandLine.xml
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\bin\Debug\Steveo.Wetnap.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\bin\Debug\googleclosure.jar
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\BoosterDeploy\bin\Debug\Steveo.Wetnap.xml
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\bin\Debug\BoosterDeploy.exe.config
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\obj\x86\Debug\BoosterDeploy.exe
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\obj\x86\Debug\BoosterDeploy.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\bin\Debug\googleclosure.jar
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\bin\Debug\BoosterDeploy.exe
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\bin\Debug\BoosterDeploy.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\bin\Debug\AssetBooster.Configuration.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\bin\Debug\AWSSDK.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\bin\Debug\CommandLine.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\bin\Debug\Steveo.Wetnap.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\bin\Debug\Yahoo.Yui.Compressor.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\bin\Debug\EcmaScript.NET.modified.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\bin\Debug\AssetBooster.Configuration.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\bin\Debug\CommandLine.xml
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\obj\x86\Debug\BoosterDeploy.Properties.Resources.resources
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\BoosterDeploy\bin\Debug\Steveo.Wetnap.pdb

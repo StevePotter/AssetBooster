@@ -1,0 +1,22 @@
+D:\Mediascend\Development\AssetBooster\WebForms\bin\Debug\AssetBooster.WebForms.dll
+D:\Mediascend\Development\AssetBooster\WebForms\bin\Debug\AssetBooster.WebForms.pdb
+D:\Mediascend\Development\AssetBooster\WebForms\obj\Debug\ResolveAssemblyReference.cache
+D:\Mediascend\Development\AssetBooster\WebForms\obj\Debug\AssetBooster.WebForms.dll
+D:\Mediascend\Development\AssetBooster\WebForms\obj\Debug\AssetBooster.WebForms.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\WebForms\bin\Debug\AssetBooster.WebForms.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\WebForms\bin\Debug\AssetBooster.WebForms.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\WebForms\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\WebForms\obj\Debug\AssetBooster.WebForms.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\WebForms\obj\Debug\AssetBooster.WebForms.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\WebForms\bin\Debug\AssetBooster.Configuration.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\WebForms\bin\Debug\Steveo.Wetnap.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\WebForms\bin\Debug\AssetBooster.Configuration.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\WebForms\bin\Debug\Steveo.Wetnap.xml
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebForms\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebForms\bin\Debug\AssetBooster.WebForms.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebForms\bin\Debug\AssetBooster.WebForms.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebForms\bin\Debug\AssetBooster.Configuration.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebForms\bin\Debug\AssetBooster.Configuration.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebForms\bin\Debug\Steveo.Wetnap.xml
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebForms\obj\Debug\AssetBooster.WebForms.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\WebForms\obj\Debug\AssetBooster.WebForms.pdb

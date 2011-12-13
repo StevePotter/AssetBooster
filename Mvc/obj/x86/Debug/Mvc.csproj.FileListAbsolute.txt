@@ -1,0 +1,23 @@
+D:\Mediascend\Development\AssetBooster\Mvc\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Mediascend\Development\AssetBooster\Mvc\bin\Debug\AssetBooster.Mvc.dll
+D:\Mediascend\Development\AssetBooster\Mvc\bin\Debug\AssetBooster.Mvc.pdb
+D:\Mediascend\Development\AssetBooster\Mvc\obj\x86\Debug\AssetBooster.Mvc.dll
+D:\Mediascend\Development\AssetBooster\Mvc\obj\x86\Debug\AssetBooster.Mvc.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\Mvc\bin\Debug\AssetBooster.Mvc.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\Mvc\bin\Debug\AssetBooster.Mvc.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\Mvc\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\Mvc\obj\x86\Debug\AssetBooster.Mvc.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\Mvc\obj\x86\Debug\AssetBooster.Mvc.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\Mvc\bin\Debug\AssetBooster.Configuration.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\Mvc\bin\Debug\Steveo.Wetnap.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\Mvc\bin\Debug\AssetBooster.Configuration.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\Mvc\bin\Debug\Steveo.Wetnap.xml
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\bin\Debug\AssetBooster.Mvc.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\bin\Debug\AssetBooster.Mvc.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\bin\Debug\AssetBooster.Configuration.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\bin\Debug\Steveo.Wetnap.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\bin\Debug\AssetBooster.Configuration.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\obj\x86\Debug\AssetBooster.Mvc.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\obj\x86\Debug\AssetBooster.Mvc.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Mvc\bin\Debug\Steveo.Wetnap.pdb

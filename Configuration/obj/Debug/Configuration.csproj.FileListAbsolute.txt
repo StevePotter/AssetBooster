@@ -1,0 +1,20 @@
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\Configuration\bin\Debug\AssetBooster.Configuration.dll
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\Configuration\bin\Debug\AssetBooster.Configuration.pdb
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\Configuration\obj\Debug\ResolveAssemblyReference.cache
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\Configuration\obj\Debug\AssetBooster.Configuration.dll
+D:\Mediascend\Development\AssetBooster\BoosterDeploy\Configuration\obj\Debug\AssetBooster.Configuration.pdb
+D:\Mediascend\Development\AssetBooster\Configuration\bin\Debug\AssetBooster.Configuration.dll
+D:\Mediascend\Development\AssetBooster\Configuration\bin\Debug\AssetBooster.Configuration.pdb
+D:\Mediascend\Development\AssetBooster\Configuration\obj\Debug\ResolveAssemblyReference.cache
+D:\Mediascend\Development\AssetBooster\Configuration\obj\Debug\AssetBooster.Configuration.dll
+D:\Mediascend\Development\AssetBooster\Configuration\obj\Debug\AssetBooster.Configuration.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\Configuration\bin\Debug\AssetBooster.Configuration.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\Configuration\bin\Debug\AssetBooster.Configuration.pdb
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\Configuration\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\Configuration\obj\Debug\AssetBooster.Configuration.dll
+D:\Documents\My Dropbox\Takeoff Dev\AssetBooster\Configuration\obj\Debug\AssetBooster.Configuration.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Configuration\bin\Debug\AssetBooster.Configuration.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Configuration\bin\Debug\AssetBooster.Configuration.pdb
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Configuration\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Configuration\obj\Debug\AssetBooster.Configuration.dll
+C:\Users\Steve\Dropbox\Dev Projects\AssetBooster\Configuration\obj\Debug\AssetBooster.Configuration.pdb
